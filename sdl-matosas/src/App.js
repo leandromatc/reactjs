@@ -1,26 +1,17 @@
 
-import './App.css';
 import Navbar from './components/Navbar/Navbar.js'
+import {ItemListContainer} from './components/ItemListContainer/ItemListContainer.js'
 
 function App() {
 
+  const prods = 'Aquí van a ir todos los productos'
 
   return (
-    <div className="App">
+    <div>
+
       <Navbar />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ItemListContainer productos={prods} />
+
     </div>
   );
 }

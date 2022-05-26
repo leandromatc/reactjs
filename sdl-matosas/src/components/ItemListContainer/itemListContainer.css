@@ -1,0 +1,11 @@
+.container {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+span {
+    color: #294d80;
+    font-size: larger;
+    font-weight: 600;
+}

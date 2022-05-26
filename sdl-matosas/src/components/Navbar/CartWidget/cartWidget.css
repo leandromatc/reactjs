@@ -1,0 +1,12 @@
+.cart__btn {
+    margin-left: .5rem;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.cart__btn:hover {
+    color: #4e78b3;
+    transform: rotate(30deg);
+}
