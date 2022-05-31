@@ -1,6 +1,7 @@
 
 import Navbar from './components/Navbar/Navbar.js'
-import {ItemListContainer} from './components/ItemListContainer/ItemListContainer.js'
+import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
+import {ItemCount} from './components/ItemCount/ItemCount'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
       <Navbar />
       <ItemListContainer productos={prods} />
-
+      <ItemCount/>
     </div>
   );
 }
