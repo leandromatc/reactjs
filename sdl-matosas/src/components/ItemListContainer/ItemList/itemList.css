@@ -1,0 +1,13 @@
+.card__list {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #4e78b3;
+}

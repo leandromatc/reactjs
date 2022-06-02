@@ -22,13 +22,15 @@ export const ItemCount = () => {
     }
 
     return (
-        <div className='counter__box'>
-            <div className='counter__input'>
-                <BiMinus className='btn-subtract' onClick={restar} />
-                {contador}
-                <BsPlus className='btn-plus' onClick={incrementar}/>
+        <div>
+            <div className='counter__box'>
+                <div className='counter__input'>
+                    <BiMinus className='btn-subtract' onClick={restar} />
+                    {contador}
+                    <BsPlus className='btn-plus' onClick={incrementar}/>
+                </div>
+                <div className='btn-add'>Agregar al carrito</div>
             </div>
-            <div className='btn-add'>Agregar al carrito</div>
         </div>
     )
 
