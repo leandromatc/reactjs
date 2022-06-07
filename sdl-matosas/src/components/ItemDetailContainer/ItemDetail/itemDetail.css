@@ -1,0 +1,21 @@
+.detail__title {
+    color: #4e78b3;
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.detail__desc {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.detail__price {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.detail__img {
+    width: 150px;
+}

@@ -1,4 +1,4 @@
-import Item from "../../Item/Item"
+import Item from "./Item/Item"
 import './itemList.css'
 
 
@@ -6,12 +6,14 @@ import './itemList.css'
 const ItemList = ( {items} ) => {
 
     return (
-        <div className="card__list">
+        <div className="prod__section">
             <h2 className="title">Nuestro productos</h2>
 
-            {
-                items.map((item) => <Item key={item.id} item={item}/>)
-            }
+            <div className="card__list">
+                {
+                    items.map((item) => <Item key={item.id} item={item}/>)
+                }
+            </div>
         </div>
     )
 }

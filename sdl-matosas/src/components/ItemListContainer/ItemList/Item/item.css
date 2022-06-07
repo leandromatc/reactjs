@@ -1,0 +1,31 @@
+.item__card {
+    background-color: rgb(247, 247, 247);
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item__card:hover {
+    transform: scale(.95);
+    border: 1px solid rgb(238, 238, 238);
+}
+
+.card__title {
+    color: #4e78b3;
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card__img {
+    width: 100px;
+}

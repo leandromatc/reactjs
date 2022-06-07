@@ -25,7 +25,7 @@ const productos = [
         nombre: "Creatine Monohydrate",
         desc: "Creatine Monohydrate es creada por PRO-FIT",
         precio: 1190,
-        img: "../img/creatineM"
+        img: "../img/creatineM.png"
     },
     {
         id: 5,

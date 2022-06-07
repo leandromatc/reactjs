@@ -1,7 +1,16 @@
-.card__list {
-    margin: 20px auto;
+.prod__section {
+    width: 90%;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__list {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
 }
