@@ -1,3 +1,10 @@
+.detail__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .detail__title {
     color: #4e78b3;
     margin: 5px 0;

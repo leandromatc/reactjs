@@ -2,19 +2,22 @@ import { ItemCount } from "./ItemCount/ItemCount"
 import './itemDetail.css'
 
 
-export const ItemDetail = ({dato}) => {
+export const ItemDetail = ({item}) => {
 
 
 
     return (
-        <>
-        <img src={dato.img} alt={dato.desc}/>
-        <h3 className="detail__title">{dato.nombre}</h3>
-        <p className="detail__desc">{dato.desc}</p>
-        <p>PRECIO:<span className="detail__price">${dato.precio}</span></p>
-        
-        <ItemCount />
-        </>
+        <div className="detail__card">
+            <div>
+                <img src={item.img} alt={item.desc}/>
+            </div>
+            <div>
+                <h3 className="detail__title">{item.nombre}</h3>
+                <p className="detail__desc">{item.desc}</p>
+                <p>PRECIO:<span className="detail__price">${item.precio}</span></p>
+                <ItemCount />
+            </div>
+        </div>
 
     )
 }
