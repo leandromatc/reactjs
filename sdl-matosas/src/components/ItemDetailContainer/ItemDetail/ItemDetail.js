@@ -4,7 +4,7 @@ import './itemDetail.css'
 
 export const ItemDetail = ({item}) => {
 
-
+    console.log(item)
 
     return (
         <div className="detail__card">
@@ -18,6 +18,5 @@ export const ItemDetail = ({item}) => {
                 <ItemCount />
             </div>
         </div>
-
     )
 }
