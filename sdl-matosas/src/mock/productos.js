@@ -5,6 +5,7 @@ const productos = [
         desc: "Iso Protein es desarrollada por Body Builders",
         precio: 490,
         img: "../img/isoProtein.png",
+        stock: 18,
         category: "bodybuilders"
     },
     {
@@ -13,6 +14,7 @@ const productos = [
         desc: "Whey Gourmet es desarrollada por PRO-FIT",
         precio: 990,
         img: "../img/wheygourmet.png",
+        stock: 18,
         category: "profit"
     },
     {
@@ -21,6 +23,7 @@ const productos = [
         desc: "Whey Gourmet Premium es desarrollada por PRO-FIT",
         precio: 1190,
         img: "../img/wheypremium.png",
+        stock: 18,
         category: "profit"
     },
     {
@@ -29,6 +32,7 @@ const productos = [
         desc: "Creatine Monohydrate es desarrollada por PRO-FIT",
         precio: 530,
         img: "../img/creatineM.png",
+        stock: 18,
         category: "profit"
     },
     {
@@ -37,6 +41,7 @@ const productos = [
         desc: "Creatine Creapure es desarrollada por DUX",
         precio: 825,
         img: "../img/creatineCreapure.png",
+        stock: 18,
         category: "dux"
     },
     {
@@ -45,6 +50,7 @@ const productos = [
         desc: "LIPO Black es desarrollada por Nutrex Research",
         precio: 1090,
         img: "../img/lipo.png",
+        stock: 18,
         category: "nutrexresearch",
     },
     {
@@ -53,6 +59,7 @@ const productos = [
         desc: "BCAA Super Pump es desarrollada por PRO-FIT",
         precio: 675,
         img: "../img/bcaa.png",
+        stock: 18,
         category: "profit"
     },
     {
@@ -61,6 +68,7 @@ const productos = [
         desc: "Hyper Whey es desarrollada por PRO-FIT",
         precio: 1050,
         img: "../img/hyperwhey.png",
+        stock: 18,
         category: "profit"
     },
     {
@@ -69,6 +77,7 @@ const productos = [
         desc: "BCAA 4,5g es desarrollada por Body Builders",
         precio: 490,
         img: "../img/bcaa45.png",
+        stock: 18,
         category: "bodybuilders"
     },
     {
@@ -77,6 +86,7 @@ const productos = [
         desc: "Iso Protein es desarrollada por Body Builders",
         precio: 490,
         img: "../img/isoprotein.png",
+        stock: 18,
         category: "bodybuilders"
     },
 ]
