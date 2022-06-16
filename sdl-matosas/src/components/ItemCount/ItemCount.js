@@ -25,7 +25,7 @@ export const ItemCount = ({stock, setCantidad, cantidad, handleAgregar}) => {
                     {cantidad}
                     <BsPlus className='btn-plus' onClick={handleSumar}/>
                 </div>
-                <div className='btn-add' onClick={handleAgregar}>Agregar al carrito</div>
+                <div className='btn btn-outline-primary my-3' onClick={handleAgregar}>Agregar al carrito</div>
             </div>
         </div>
     )

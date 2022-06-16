@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { leerProductos } from "../../mock/leerProductos"
-import ItemList from "./ItemList/ItemList"
+import ItemList from "../ItemList/ItemList"
 import './itemListContainer.css'
 
 
@@ -12,7 +12,6 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
-    console.log(categoryId)
 
     useEffect(() => {
 

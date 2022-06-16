@@ -1,4 +1,4 @@
-import { ItemDetail } from "./ItemDetail/ItemDetail"
+import { ItemDetail } from "../ItemDetail/ItemDetail"
 import './itemDetailContainer.css'
 import { useState, useEffect } from "react";
 import { leerProductos } from "../../mock/leerProductos";
