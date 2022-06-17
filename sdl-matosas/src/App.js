@@ -8,38 +8,15 @@ import { Nosotros } from './components/Nosotros/Nosotros';
 import { Productos } from './components/Productos/Productos';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './components/Cart/Cart';
-import { useState } from 'react'
-import { CartContext } from './context/CartContext'
+import { CartProvider } from './context/CartContext'
 
 function App() {
 
-  const [cart, setCart] = useState([])
-
-  const addItem = (item) => {
-    setCart( [...cart, item] )
-  }
-
-  const isInCart = (id) => {
-    return cart.some((prod) => prod.id === id)
-  }
-
-  const totalPrice = () => {
-    return cart.reduce( (acc, prod) => acc += (prod.precio * prod.cantidad), 0)
-  }
-
-  const totalQuantity = () => {
-    return cart.reduce((acc,prod) => acc += prod.cantidad, 0)
-  }
-
-  const emptyCart = () => {
-    setCart( [] )
-  }
 
 
   return (
 
-    <CartContext.Provider value={ {cart, addItem, isInCart, totalPrice, totalQuantity, emptyCart} }>
-
+    <CartProvider>
       <BrowserRouter >
         
         <Navbar />
@@ -58,7 +35,8 @@ function App() {
         
       </BrowserRouter>
 
-    </CartContext.Provider>
+    </CartProvider>
+
   );
 }
 
