@@ -9,6 +9,15 @@ export const Cart = () => {
 
 
     let contador = 0;
+    // console.log(cart.length)
+    if (cart.length === 0) {
+        return <div className="container my-3">
+            <h2>CARRITO VACÍO</h2>
+            <hr/>
+            <p>Actualmente tu carrito está vacío, ¡ve a buscar en nuestros productos!</p>
+            <Link to={'/'} className="btn btn-outline-primary">BUSCAR PRODUCTOS</Link>
+        </div>
+    }
 
 
     return (
