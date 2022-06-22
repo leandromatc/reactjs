@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { leerProductos } from "../../mock/leerProductos"
 import ItemList from "../ItemList/ItemList"
 import './itemListContainer.css'
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 
 
@@ -14,21 +15,25 @@ export const ItemListContainer = () => {
     const { categoryId } = useParams()
 
     useEffect(() => {
+        setLoading(true)
 
-        leerProductos()
+        // 1.- armar la referencia
+        const productosRef = collection(db, "productos")
+        const q = categoryId ? query(productosRef, where("category", "==", categoryId)) : productosRef
+        // 2.- (async) llamar a Firebase con la referencia anterior
+        getDocs(q)
             .then((resp) => {
-                if (!categoryId) {
-                    setItems( resp )
-                } else {
-                    setItems(resp.filter((item) => item.category === categoryId))
-                }
-            })
-            .catch((error) => {
-                console.log('ERROR', error)
+                setItems( resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }) )
             })
             .finally(() => {
-            setLoading( false )
-        })
+                setLoading(false)
+            })
+
     }, [categoryId])
 
     return (

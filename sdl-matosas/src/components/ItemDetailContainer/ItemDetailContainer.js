@@ -1,8 +1,9 @@
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import './itemDetailContainer.css'
 import { useState, useEffect } from "react";
-import { leerProductos } from "../../mock/leerProductos";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 export const ItemDetailContainer = () => {
 
@@ -12,17 +13,18 @@ export const ItemDetailContainer = () => {
     const { itemId } = useParams()
 
     useEffect(() => {
-        leerProductos()
-        .then((resp) => {
-            setItem( resp.find((item) => item.id === Number(itemId)) )
-        })
-        .catch((error) => {
-            console.log('ERROR', error)
-        })
-        .finally(() => {
-            setLoading( false )
-        })
-    }, );
+        setLoading(true)
+        // 1.- armar la referencia
+        const docRef = doc(db, "productos", itemId)
+        // 2.- llamar a firestore
+        getDoc(docRef)
+            .then((resp) => {
+                setItem( {id: resp.id, ...resp.data()})
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [itemId]);
 
     return (
         <div className="container my-5">
