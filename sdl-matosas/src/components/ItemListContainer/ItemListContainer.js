@@ -37,21 +37,27 @@ export const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <section className="products__section container my-5">
-            
-            <div className="categorias">
-                <h3>CATEGORÍAS</h3>
-                <hr/>
-                <Link to='/categorias/profit' className="category__link">PRO-FIT</Link>
-                <Link to='/categorias/nutrexresearch' className="category__link">Nutrex Research</Link>
-                <Link to='/categorias/dux' className="category__link">DUX</Link>
-                <Link to='/categorias/bodybuilders' className="category__link">Body Builders</Link>
-            </div>
-            {
-                
-                loading ? "Cargando" : <ItemList items={items}/>
+        <section className="section container my-5">
 
-            }
+            <div>
+                <img src="../img/slider1.png" alt="slider 1" />
+            </div>
+
+            <h2 className="title">NUESTROS PRODUCTOS</h2>
+            
+            <div className="prod__section">
+                <div className="categorias">
+                    <h3>CATEGORÍAS</h3>
+                    <hr/>
+                    <Link to='/categorias/profit' className="category__link">PRO-FIT</Link>
+                    <Link to='/categorias/nutrexresearch' className="category__link">Nutrex Research</Link>
+                    <Link to='/categorias/dux' className="category__link">DUX</Link>
+                    <Link to='/categorias/bodybuilders' className="category__link">Body Builders</Link>
+                </div>
+                {
+                    loading ? "Cargando" : <ItemList items={items}/>
+                }
+            </div>
             
         </section>
     )

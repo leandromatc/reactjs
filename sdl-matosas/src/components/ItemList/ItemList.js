@@ -7,7 +7,6 @@ const ItemList = ( {items} ) => {
 
     return (
         <div className="prod__section">
-            <h2 className="title">Nuestro productos</h2>
 
             <div className="card__list">
                 {

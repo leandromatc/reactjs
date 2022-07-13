@@ -2,3 +2,15 @@
     color: rgb(187, 45, 45);
     cursor: pointer;
 }
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #4e78b3;
+}
+
+.parrafo__cart {
+    color: #4e78b3;
+
+}

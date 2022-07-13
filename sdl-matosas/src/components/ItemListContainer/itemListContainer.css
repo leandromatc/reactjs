@@ -1,6 +1,8 @@
-.products__section {
+.section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .categorias {
@@ -11,5 +13,19 @@
 
 .category__link {
     text-decoration: none;
+    color: #4e78b3;
+}
+
+.prod__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
     color: #4e78b3;
 }

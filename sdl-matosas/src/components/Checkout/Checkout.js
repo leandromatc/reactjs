@@ -1,3 +1,4 @@
+import "./checkout.css"
 import { useState } from "react"
 import { useCartContext } from "../../context/CartContext"
 import { Navigate } from 'react-router-dom'
@@ -68,14 +69,14 @@ const Checkout = () => {
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Hay items sin stock!',
-              })
+            })
         }
     }
 
     if (orderId) {
         return (
             <div className="container my-5">
-                <h2>Gracias por su compra!</h2>
+                <h2 className="title">Gracias por su compra!</h2>
                 <hr/>
                 <p>Su número de orden es: {orderId}</p>
             </div>
@@ -88,7 +89,7 @@ const Checkout = () => {
 
     return (
         <div className="container my-5">
-            <h2>Checkout</h2>
+            <h2 className="my-3 title">Checkout</h2>
             <hr/>
             
             <Formik
